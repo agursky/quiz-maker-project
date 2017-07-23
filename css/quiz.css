@@ -3,7 +3,7 @@ button {
 }
 
 .container {
-    margin-top: 47px
+    margin-top: 58px
 }
 
 .nav {
@@ -11,6 +11,11 @@ button {
     top: 0;
     width: 100%;
     background-color: #2196f3;
+    padding: 8px;
+}
+
+.nav h1 {
+    display: inline;
 }
 
 .nav a {
