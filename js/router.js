@@ -7,7 +7,7 @@ app.config(function($routeProvider) {
         templateUrl: "pages/take-quiz.html"
     })
     .when("/make-quiz", {
-        templateUrl: "pages/make-quiz.html"
+        templateUrl: "pages/create-quiz.html"
     })
     .when("/view-scores", {
         templateUrl: "pages/teacher-dash.html"
