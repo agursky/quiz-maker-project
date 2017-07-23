@@ -13,7 +13,7 @@ button {
     background-color: #2196f3;
 }
 
-.nav button {
+.nav a {
     float: right;
     margin: 12px;
     background-color: transparent;
@@ -30,11 +30,16 @@ button {
     background-color: #4c4c4c;
     color: white;
     float: left;
+    height: 100vh
 }
 
-.side-nav button {
-    background-color: transparent;
+.side-nav a {
     color: white;
+    display: block;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.6px;
 }
 
 .dash-content {
