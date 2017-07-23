@@ -19,10 +19,6 @@ app.controller('mainCtrl', function($scope, classList, quizList) {
         }
     }
     
-    $scope.switchView = function(str1, str2) {
-        $scope.management[str1] = str2;
-    }
-    
     $scope.$on('Send Quiz Data', function() {
         quizList.sendData($scope.quizzes);
     })
