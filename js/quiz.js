@@ -1,4 +1,4 @@
 var app = 
-    angular.module('quizzer', []);
+    angular.module('quizzer', ["ngRoute"]);
 
 

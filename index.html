@@ -5,21 +5,20 @@
         <link type="text/css" rel="stylesheet" href="css/quiz.css"/>
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
        <script src="https://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
-<!--        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>-->
-<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
-<!--        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
     </head>
     <body>
+        <div ng-view>
         <div ng-app='quizzer'>
                 <div ng-controller='mainCtrl' ng-init='init()'>
                     <div home class='nav'></div>
                     <div ng-switch='management.viewMode' class='container'>
                         <div ng-switch-when='teacherView' id='teacher-dash-wrapper'>
                             <div class='inline side-nav'>
-<!--                                <h3>Teacher Dashboard</h3>-->
+                                <a href='#!take'>Manage Quiz</a>
                                 <button type='button' ng-click='switchView("teacherDashView", "viewQuizzes")'>Manage Quizzes</button>
                                 <button type='button' ng-click='switchView("teacherDashView", "makeQuiz")'>Make a new Quiz</button>
                                 <button type='button' ng-click='switchView("teacherDashView", "viewClasses")'>View Scores by Class</button>
@@ -37,7 +36,9 @@
                     <button type='button' ng-click='switchView("viewMode", "teacherView")'>Home</button>
                 </div>
         </div>
+        </div>
         <script src='js/quiz.js'></script>
+        <script src='js/router.js'></script>
         <script src='js/services/classSvc.js'></script>
         <script src='js/services/quizSvc.js'></script>
         <script src='js/controllers/mainCtrl.js'></script>
