@@ -1,0 +1,21 @@
+<div ng-controller='takeQuizCtrl' class='container'>
+    <h1>Take Quiz</h1>
+    <input type='text' placeholder="First Name">
+    <input type='text' placeholder="Last Name">
+    <div class='currentUser'>
+        <span>First Name</span>
+        <span>Last Name</span>
+        <span>Class Number</span>
+        <h3>{{currentQuiz.name}}</h3>
+        <p>{{currentQuiz.questions[currentQuestion].questionText}}</p>
+        <div ng-repeat='item in currentQuiz.questions[currentQuestion].answerChoices'>
+            <span>{{letters[$index]}}</span>
+            <button type='button' ng-click='chooseAnswer(item)'>{{item}}</button>
+        </div>
+        <button type='button' ng-click='goBack()'>Back</button>
+        <button type='button' ng-click='goNext()'>Next</button>
+        <button type='button' ng-click='finishQuiz()'>Done</button>
+        <div>Progress Bar</div>
+    </div>
+    
+</div>

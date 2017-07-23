@@ -1,0 +1,29 @@
+<div ng-controller='makeQuizCtrl' class='container'>
+    <h1>Make a New Quiz</h1>
+    <input type='text' placeholder='Quiz Name' ng-model='newQuiz.name'>
+    <div ng-repeat='item in newQuiz.questions'>
+        <p>{{item.questionText}}</p>
+        <div ng-repeat='ans in item.answerChoices'>
+            <p>{{ans}}</p>
+        </div>
+    </div>
+    <input type='text' placeholder='Question' ng-model='newQuiz.newQuestion.questionText'>
+    <span ng-repeat='item in newQuiz.newQuestion.answerChoices'>{{item}}</span>
+    <input type='text' placeholder='Answer Choice' ng-model='nextAnswerChoice'>
+    <button type='button' ng-click='addAnswerChoice()'>Add Answer Choice</button>
+    <span>Select Correct Choice for this Question</span>
+    <select ng-model='newQuiz.newQuestion.correctChoice'>
+        <option ng-repeat='item in newQuiz.newQuestion.answerChoices' value='{{item}}'>{{item}}</option>
+    </select>
+    <button type='button' ng-click='addQuestion()'>Add Question</button>
+    <button type='button'>Delete Question</button>
+    <span>Which classes can take this quiz?</span>
+    <div id='classList'>
+        <div ng-repeat='(key, value) in $parent.classes'>
+            {{key}}
+        </div>
+        <input type="text" placeholder="New Class Name" ng-model='newClassName'>
+        <button type='button' ng-click='addClass(newClassName)'>Add New Class</button>
+    </div>
+    <button type='button' ng-click='saveQuiz()'>Save Quiz</button>
+</div>

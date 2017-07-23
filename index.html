@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/normalize.css"/>
+        <link type="text/css" rel="stylesheet" href="css/quiz.css"/>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+<!--        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>-->
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">-->
+<!--        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>-->
+    </head>
+    <body>
+        <div ng-app='quizzer'>
+                <div ng-controller='mainCtrl' ng-init='init()'>
+                    <div home class='nav'></div>
+                    <div ng-switch='management.viewMode' class='container'>
+                        <div ng-switch-when='teacherView' id='teacher-dash-wrapper'>
+                            <div class='inline side-nav'>
+<!--                                <h3>Teacher Dashboard</h3>-->
+                                <button type='button' ng-click='switchView("teacherDashView", "viewQuizzes")'>Manage Quizzes</button>
+                                <button type='button' ng-click='switchView("teacherDashView", "makeQuiz")'>Make a new Quiz</button>
+                                <button type='button' ng-click='switchView("teacherDashView", "viewClasses")'>View Scores by Class</button>
+                            </div><div teacher-dash class='inline dash-content'></div>
+                        </div>
+<!--
+                        <div ng-switch-when='makeQuiz'>
+                            <make-quiz></make-quiz>
+                        </div>
+-->
+                        <div ng-switch-when='studentView'>
+                            <div take-quiz></div>
+                        </div>
+                    </div>
+                    <button type='button' ng-click='switchView("viewMode", "teacherView")'>Home</button>
+                </div>
+        </div>
+        <script src='js/quiz.js'></script>
+        <script src='js/services/classSvc.js'></script>
+        <script src='js/services/quizSvc.js'></script>
+        <script src='js/controllers/mainCtrl.js'></script>
+        <script src='js/controllers/dashCtrl.js'></script>
+        <script src='js/controllers/makeQuizCtrl.js'></script>
+        <script src='js/controllers/takeQuizCtrl.js'></script>
+        <script src='js/controllers/landingCtrl.js'></script>
+        <script src='js/directives/dir_home.js'></script>
+        <script src='js/directives/dir_teacher_dash.js'></script>
+        <script src='js/directives/dir_make_quiz.js'></script>
+        <script src='js/directives/dir_take_quiz.js'></script>
+    </body>
+</html>

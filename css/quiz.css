@@ -1,0 +1,44 @@
+button {
+    border: none;
+}
+
+.container {
+    margin-top: 47px
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2196f3;
+}
+
+.nav button {
+    float: right;
+    margin: 12px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.side-nav {
+    width: 25%;
+    background-color: #4c4c4c;
+    color: white;
+    float: left;
+}
+
+.side-nav button {
+    background-color: transparent;
+    color: white;
+}
+
+.dash-content {
+    width: 74%;
+    float: left;
+    
+}
