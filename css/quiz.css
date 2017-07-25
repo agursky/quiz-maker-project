@@ -35,7 +35,8 @@ button {
     background-color: #4c4c4c;
     color: white;
     float: left;
-    height: 100vh
+    height: 100vh;
+    padding: 32px 0;
 }
 
 .side-nav a {
@@ -45,6 +46,39 @@ button {
     text-decoration: none;
     font-weight: bold;
     letter-spacing: 0.6px;
+}
+
+#content-container {
+    margin-left: 25%;
+    padding: 20px;
+}
+
+#dash-container .ind-quiz {
+    display: inline-block;
+    color: white;
+    background-color: #FF5722;
+    margin: 8px;
+    padding: 16px;
+    border-radius: 5px;
+}
+
+#dash-container .ind-quiz .button-container {
+    
+}
+
+#dash-container .ind-quiz button {
+    color: white;
+    background-color: transparent;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+#dash-container .ind-quiz i {
+    vertical-align: middle;
+}
+
+#dash-container .ind-quiz button:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .dash-content {

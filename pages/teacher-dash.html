@@ -2,18 +2,18 @@
     <div ng-switch='management.teacherDashView'>
         <div ng-switch-when='viewQuizzes'>
             <h2>Your Quizzes</h2>
-            <div ng-repeat='(key, value) in $parent.quizzes'>
-                <div>
-                    <h3>{{key}}</h3>
+            <div ng-repeat='(key, value) in $parent.quizzes' class='ind-quiz'>
+                <h3>{{key}}</h3>
+                <div class='button-container'>
                     <button type='button'><i class="fa fa-pencil" aria-hidden="true"></i>
 </button>
-                    <button type='button'><i class="fa fa-share-alt" aria-hidden="true"></i>
+                <button type='button'><i class="fa fa-share-alt" aria-hidden="true"></i>
 </button>
-                    <button type='button'><i class="fa fa-cog" aria-hidden="true"></i>
+                <button type='button'><i class="fa fa-cog" aria-hidden="true"></i>
 </button>
-                    <button type='button'><i class="fa fa-table" aria-hidden="true"></i>
+                <button type='button'><i class="fa fa-table" aria-hidden="true"></i>
 </button>
-                    <button type='button'><i class="fa fa-trash" aria-hidden="true"></i>
+                <button type='button'><i class="fa fa-trash" aria-hidden="true"></i>
 </button>
                 </div>
             </div>
